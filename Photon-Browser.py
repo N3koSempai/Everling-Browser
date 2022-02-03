@@ -46,12 +46,6 @@ class MainWindow:
 
 
 
-#call builder for glade
-#builder = Gtk.Builder()
-#builder.add_from_file('graphic.glade')
-#call objects in the glade template
-
-
 #instance the logic in the class Handler
 mainwindow = MainWindow()
 
