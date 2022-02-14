@@ -8,27 +8,31 @@ from gi.repository import Gtk
 from gi.repository.WebKit2 import WebView, Settings
 from gi.repository import WebKit2
 import re, os
-
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 class Handler:
+    def __init__(self):
+        self.about = ('file://' +  os.path.abspath(__file__) + '/History')
+
+
     def onDestroy(self, *args):
         Gtk.main_quit()
 
     def searching(self, search):
         url = mainwindow.search.get_text()
-        #different behavior depending on if you have http: or not at the beginning
+        #different behavior depending if you have http: or not at the beginning
         if re.search(r"^http://*", url):
             mainwindow.webview.load_uri(url)
-            print('ok')
+
         elif re.search(r"^about:", url):
             if url == 'about:history':
-                mainwindow.webview.load_uri('file:///var/')
+                mainwindow.webview.load_uri(self.about)
         else:
             print('with engine')
             mainwindow.webview.load_uri((Engine % (url)))
-            print('engine second part')
-        fhand = open('History', 'a')
-        fhand.write(url + '\n')
+
+        fhand = open('History.html', 'a')
+        fhand.write('<p' + url + '\n')
         fhand.close()
 
 class MainWindow:
