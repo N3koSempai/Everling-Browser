@@ -1,0 +1,3 @@
+pycairo
+PyGObject
+##### not support virtualenv ######
