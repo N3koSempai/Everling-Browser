@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.38.2 -->
+<!-- Generated with glade 3.22.2 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
   <requires lib="webkit2gtk" version="2.28"/>
   <object class="GtkWindow" id="MainWindow">
-    <property name="can-focus">False</property>
+    <property name="can_focus">False</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
-        <property name="can-focus">False</property>
+        <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkBox">
             <property name="visible">True</property>
-            <property name="can-focus">False</property>
-            <property name="double-buffered">False</property>
+            <property name="can_focus">False</property>
+            <property name="double_buffered">False</property>
             <child>
               <object class="GtkBox" id="ActionBox">
                 <property name="name">ActionBox</property>
                 <property name="visible">True</property>
-                <property name="can-focus">False</property>
-                <property name="margin-left">1</property>
+                <property name="can_focus">False</property>
+                <property name="margin_left">1</property>
                 <property name="homogeneous">True</property>
                 <child>
                   <object class="GtkMenuButton" id="MainMenu">
                     <property name="visible">True</property>
-                    <property name="can-focus">True</property>
-                    <property name="receives-default">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
                     <child>
                       <placeholder/>
                     </child>
@@ -38,13 +41,43 @@
                   </packing>
                 </child>
                 <child>
-                  <placeholder/>
+                  <object class="GtkButton" id="back">
+                    <property name="label" translatable="yes">back</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
                 </child>
                 <child>
-                  <placeholder/>
+                  <object class="GtkButton" id="next">
+                    <property name="label" translatable="yes">next</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
                 </child>
                 <child>
-                  <placeholder/>
+                  <object class="GtkButton" id="reload">
+                    <property name="label" translatable="yes">reload</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">3</property>
+                  </packing>
                 </child>
                 <child>
                   <placeholder/>
@@ -62,12 +95,13 @@
             <child>
               <object class="GtkEntry" id="Searchbox">
                 <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="double-buffered">False</property>
-                <property name="max-width-chars">1</property>
-                <property name="shadow-type">none</property>
-                <property name="caps-lock-warning">False</property>
-                <property name="placeholder-text" translatable="yes">search in the internet</property>
+                <property name="can_focus">True</property>
+                <property name="opacity">0.80000000000000004</property>
+                <property name="double_buffered">False</property>
+                <property name="max_width_chars">1</property>
+                <property name="shadow_type">none</property>
+                <property name="caps_lock_warning">False</property>
+                <property name="placeholder_text" translatable="yes">search in the internet</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -78,7 +112,7 @@
             <child>
               <object class="GtkBox">
                 <property name="visible">True</property>
-                <property name="can-focus">False</property>
+                <property name="can_focus">False</property>
                 <child>
                   <placeholder/>
                 </child>
@@ -102,12 +136,12 @@
         <child>
           <object class="GtkNotebook" id="tabsbar">
             <property name="visible">True</property>
-            <property name="can-focus">True</property>
-            <property name="group-name">tabs</property>
+            <property name="can_focus">True</property>
+            <property name="group_name">tabs</property>
             <child>
-              <object class="WebKitWebView" type-func="webkit_web_view_get_type" id="Webview">
+              <object class="WebKitWebView" id="Webview">
                 <property name="visible">True</property>
-                <property name="can-focus">True</property>
+                <property name="can_focus">True</property>
                 <child>
                   <placeholder/>
                 </child>
@@ -116,11 +150,11 @@
             <child type="tab">
               <object class="GtkLabel" id="page1">
                 <property name="visible">True</property>
-                <property name="can-focus">False</property>
+                <property name="can_focus">False</property>
                 <property name="label" translatable="yes">v 1</property>
               </object>
               <packing>
-                <property name="tab-fill">False</property>
+                <property name="tab_fill">False</property>
               </packing>
             </child>
             <child>
@@ -176,13 +210,13 @@
     </child>
   </object>
   <object class="GtkPopoverMenu" id="MenuFile">
-    <property name="can-focus">False</property>
-    <property name="relative-to">MainMenu</property>
+    <property name="can_focus">False</property>
+    <property name="relative_to">MainMenu</property>
     <child>
       <placeholder/>
     </child>
   </object>
-  <object class="WebKitSettings" type-func="webkit_settings_get_type" id="settings1">
-    <property name="user-agent">Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Safari/605.1.15</property>
+  <object class="WebKitSettings" id="settings1">
+    <property name="user_agent">Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Safari/605.1.15</property>
   </object>
 </interface>
