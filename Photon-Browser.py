@@ -35,12 +35,14 @@ class Handler:
         fhand.write('<p' + url + '\n')
         fhand.close()
 
+class Headerbar:
+
     def back(self, back):
         enable = mainwindow.webview.can_go_back()
         if enable == True:
             mainwindow.webview.go_back()
 
-    def next(self, next):
+    def forward(self, next):
         enable = mainwindow.webview.can_go_forward()
         if enable == True:
             mainwindow.webview.go_forward()
@@ -66,20 +68,25 @@ class MainWindow:
         self.back = self.builder.get_object('back')
         self.next = self.builder.get_object('next')
         self.reload = self.builder.get_object('reload')
-
+        self.mainmenu = self.builder.get_object('MainMenu')
+        self.mainfile = self.builder.get_object('MainFile')
 
 
 
 #instance the logic in the class Handler
 mainwindow = MainWindow()
-
+headerbar = Headerbar()
 handler = Handler()
 
 #signals
+
+#headerbard signals
 mainwindow.search.connect('activate', handler.searching)
-mainwindow.back.connect('clicked', handler.back)
-mainwindow.next.connect('clicked', handler.next)
-mainwindow.reload.connect('clicked', handler.reload)
+mainwindow.back.connect('clicked', headerbar.back)
+mainwindow.next.connect('clicked', headerbar.forward)
+mainwindow.reload.connect('clicked', headerbar.reload)
+
+
 mainwindow.window.connect('destroy', handler.onDestroy)
 Engine = 'https://www.ecosia.org/search?q=%s'
 
