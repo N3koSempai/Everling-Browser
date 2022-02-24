@@ -35,7 +35,11 @@
                     <property name="receives_default">True</property>
                     <property name="popover">MenuFile</property>
                     <child>
-                      <placeholder/>
+                      <object class="GtkImage" id="icon_menu">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="pixbuf">icons/menu.ico</property>
+                      </object>
                     </child>
                   </object>
                   <packing>
@@ -46,10 +50,16 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="back">
-                    <property name="label" translatable="yes">back</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
+                    <child>
+                      <object class="GtkImage" id="icon_back">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="pixbuf">icons/back.ico</property>
+                      </object>
+                    </child>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -59,10 +69,16 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="next">
-                    <property name="label" translatable="yes">next</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
+                    <child>
+                      <object class="GtkImage" id="icon_next">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="pixbuf">icons/next.ico</property>
+                      </object>
+                    </child>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -72,10 +88,16 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="reload">
-                    <property name="label" translatable="yes">reload</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
+                    <child>
+                      <object class="GtkImage" id="icon_reload">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="pixbuf">icons/reload.ico</property>
+                      </object>
+                    </child>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -263,6 +285,7 @@
       </object>
       <packing>
         <property name="submenu">submenu0</property>
+        <property name="position">1</property>
       </packing>
     </child>
   </object>
