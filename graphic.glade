@@ -173,18 +173,14 @@
                 </child>
               </object>
             </child>
-            <child type="tab">
-              <object class="GtkLabel" id="page1">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">v 1</property>
-              </object>
-              <packing>
-                <property name="tab_fill">False</property>
-              </packing>
-            </child>
             <child>
-              <placeholder/>
+              <object class="WebKitWebView" id="Webview2">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
             </child>
             <child type="tab">
               <placeholder/>
