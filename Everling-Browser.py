@@ -4,7 +4,7 @@
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('WebKit2', '4.0')
-from gi.repository import Gtk
+from gi.repository import Gtk 
 from gi.repository.WebKit2 import WebView, Settings
 from gi.repository import WebKit2
 import re, os
@@ -35,6 +35,14 @@ class Handler:
         fhand.write('<p' + url + '\n')
         fhand.close()
 
+
+    def add_page(self, _):
+        label1 = Gtk.Label.new("Page 1")
+        child1 = Gtk.Label.new("Go to page 2 to find the answer.")
+        mainwindow.tabsbar.prepend_page(child1, label1)
+        mainwindow.window.show_all()
+
+
 class Headerbar:
 
     def back(self, back):
@@ -53,7 +61,7 @@ class Headerbar:
     
 
 
-class MainWindow:
+class MainWindow():
 
     def __init__(self):
         self.builder = Gtk.Builder()
@@ -70,7 +78,7 @@ class MainWindow:
         self.reload = self.builder.get_object('reload')
         self.mainmenu = self.builder.get_object('MainMenu')
         self.mainfile = self.builder.get_object('MainFile')
-
+        self.new_page = self.builder.get_object('new_page')
 
 
 #instance the logic in the class Handler
@@ -85,6 +93,7 @@ mainwindow.search.connect('activate', handler.searching)
 mainwindow.back.connect('clicked', headerbar.back)
 mainwindow.next.connect('clicked', headerbar.forward)
 mainwindow.reload.connect('clicked', headerbar.reload)
+mainwindow.new_page.connect('clicked', handler.add_page)
 
 
 mainwindow.window.connect('destroy', handler.onDestroy)
