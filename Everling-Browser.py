@@ -21,8 +21,16 @@ class Handler:
     def searching(self, search):
         url = mainwindow.search.get_text()
         #different behavior depending if you have http: or not at the beginning
+        
         if re.search(r"^http?://", url):
+            temppage = mainwindow.tabsbar.get_current_page()
             mainwindow.webview.load_uri(url)
+            title = mainwindow.webview.get_title()
+            print(title)
+            list = mainwindow.tabsbar.get_children()
+            child = list[temppage]
+            print(type(child))
+            mainwindow.tabsbar.set_tab_label(child, title)
 
         elif re.search(r"^about:", url):
             if url == 'about:history':
@@ -37,9 +45,12 @@ class Handler:
 
 
     def add_page(self, _):
-        label1 = Gtk.Label.new("Page 1")
-        child1 = Gtk.Label.new("Go to page 2 to find the answer.")
-        mainwindow.tabsbar.prepend_page(child1, label1)
+        label1 = Gtk.Label.new("new page")
+        webview2 = mainwindow.webview.new()
+        mainwindow.tabsbar.prepend_page(webview2, label1)
+        print(mainwindow.tabsbar.get_children())
+        webview2.load_uri('about:error')
+        # mainwindow.tabsbar.set_tab_detachable(mainwindow.tabsbar.props.page, True)
         mainwindow.window.show_all()
 
 
@@ -73,6 +84,7 @@ class MainWindow():
         self.window.set_title('Everling Browser')
         self.search = self.builder.get_object('Searchbox')
         self.tabsbar = self.builder.get_object('tabsbar')
+        
         self.back = self.builder.get_object('back')
         self.next = self.builder.get_object('next')
         self.reload = self.builder.get_object('reload')

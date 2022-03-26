@@ -49,6 +49,20 @@
                   </packing>
                 </child>
                 <child>
+                  <object class="GtkButton" id="new_page">
+                    <property name="label" translatable="yes">+</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="focus_on_click">False</property>
+                    <property name="receives_default">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
                   <object class="GtkButton" id="back">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -64,7 +78,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">1</property>
+                    <property name="position">2</property>
                   </packing>
                 </child>
                 <child>
@@ -83,7 +97,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">2</property>
+                    <property name="position">3</property>
                   </packing>
                 </child>
                 <child>
@@ -102,11 +116,8 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">3</property>
+                    <property name="position">4</property>
                   </packing>
-                </child>
-                <child>
-                  <placeholder/>
                 </child>
                 <child>
                   <placeholder/>
@@ -163,6 +174,9 @@
           <object class="GtkNotebook" id="tabsbar">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="scrollable">True</property>
+            <property name="enable_popup">True</property>
+            <property name="group_name">tabsbar_webview</property>
             <child>
               <object class="WebKitWebView" id="Webview">
                 <property name="visible">True</property>
@@ -174,37 +188,16 @@
               </object>
             </child>
             <child type="tab">
-              <object class="GtkLabel">
+              <object class="GtkLabel" id="page1">
                 <property name="visible">True</property>
+                <property name="sensitive">False</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">page 1</property>
+                <property name="label" translatable="yes">new page</property>
               </object>
               <packing>
                 <property name="tab_fill">False</property>
                 <property name="reorderable">True</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkImage">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="stock">gtk-dialog-warning</property>
-              </object>
-              <packing>
-                <property name="position">1</property>
-              </packing>
-            </child>
-            <child type="tab">
-              <object class="GtkButton" id="new_page">
-                <property name="label" translatable="yes">+</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="focus_on_click">False</property>
-                <property name="receives_default">True</property>
-              </object>
-              <packing>
-                <property name="position">1</property>
-                <property name="tab_fill">False</property>
+                <property name="detachable">True</property>
               </packing>
             </child>
           </object>

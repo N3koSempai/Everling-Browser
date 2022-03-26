@@ -1,6 +1,6 @@
 # Everling-Browser
 
-## SELECT LANGUAGE
+## index
 [Introduction ](###Introduction:)
 
 
@@ -27,5 +27,5 @@ Check the [Roadmap](##Roadmap:)
 ## Roadmap:
 
 ![representation of the roadmap project](
-    https://github.com/N3koSempai/Everling-Browser/image/roadmap.webp
+    /image/roadmap.webp
 )
