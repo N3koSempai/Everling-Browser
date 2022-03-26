@@ -1,18 +1,31 @@
 # Everling-Browser
 
 ## SELECT LANGUAGE
-[English ](##EN)
-[Spanish](##ES)
+[Introduction ](###Introduction:)
 
-## EN
 
-### Introduction:
 
-#### Welcome to the Everling Browser Project.
+## Introduction:
+
+### Welcome to the Everling Browser Project.
 
 The objective of this project is create a Browser Eco Friendly and 100% Open Source without Chromiun Base.
 
 With that purpose, use Webkit2 has a base engine and GTK 3 for GUI. Aditional the Browser have many
 Eco friendly search engine (example: Ecosia, Gexsi, OceanHero). More amazing features are coming soon.
-Check the [Roadmap](##Roadmap)
+Check the [Roadmap](##Roadmap:)
 
+
+
+
+
+
+
+
+
+
+## Roadmap:
+
+![representation of the roadmap project](
+    https://github.com/N3koSempai/Everling-Browser/image/roadmap.webp
+)
