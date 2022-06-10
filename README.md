@@ -17,10 +17,11 @@ Check the [Roadmap](##Roadmap)
 
 
 
+## Video of test alpha version
 
 
-
-
+[![Alt text](https://img.youtube.com/vi/KNK477Cxixg/0.jpg)](https://www.youtube.com/watch?v=KNK477Cxixg)
+Click on the image to play the video
 
 
 
