@@ -4,6 +4,8 @@
 [Introduction ](###Introduction:)
 
 
+[![CodeFactor](https://www.codefactor.io/repository/github/n3kosempai/everling-browser/badge)](https://www.codefactor.io/repository/github/n3kosempai/everling-browser)
+
 
 ## Introduction:
 
