@@ -5,6 +5,7 @@
 
 
 [![CodeFactor](https://www.codefactor.io/repository/github/n3kosempai/everling-browser/badge)](https://www.codefactor.io/repository/github/n3kosempai/everling-browser)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FN3koSempai%2FEverling-Browser.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FN3koSempai%2FEverling-Browser?ref=badge_shield)
 
 
 ## Introduction:
@@ -32,3 +33,7 @@ Click on the image to play the video
 ![representation of the roadmap project](
     /image/roadmap.webp
 )
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FN3koSempai%2FEverling-Browser.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FN3koSempai%2FEverling-Browser?ref=badge_large)
