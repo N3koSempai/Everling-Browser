@@ -18,7 +18,7 @@ function App() {
     <div className="flex w-[50%] flex-row  items-center justify-center text-center">
       <Input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} size="lg" variant="outlined"  placeholder="Search" id='searchBard' crossOrigin={''}/>
       </div>
-      <Button placeholder='' onClick={()=>{setFixedSearch(searchValue)}}>search </Button>
+      <Button placeholder='' color="blue" className='ml-2'onClick={()=>{setFixedSearch(searchValue)}}>search </Button>
       </div>
       <Frame src={fixedSearch} />
       
