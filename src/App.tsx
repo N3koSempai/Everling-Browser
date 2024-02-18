@@ -1,20 +1,15 @@
 /* <div id='WebViewFramer' className="flex flex-col h-[50%] w-full mt-4 overflow-x-hidden overflow-y-scroll" >
 
 </div> */
-
-
 import { Button, Input } from "@material-tailwind/react";
 import "./App.css";
-import { useGetWeb } from './service/getWeb'
+
 import { useState } from "react"
 import Frame from "./components/frame"
 function App() {
   const [searchValue, setSearchValue] = useState('https://www.wikipedia.com')
   const [fixedSearch, setFixedSearch] = useState('')
-const handleSearch = async (newValue) => {
-  
 
-}
 
   return (
     <div className="container flex flex-col" style={{width: '100%'  ,height: '100vh'}}>
