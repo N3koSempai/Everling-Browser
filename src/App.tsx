@@ -42,7 +42,7 @@ setFixedSearch(`${googleQuery}${searchValue}` )
       </Menu>
     </div>
     
-    
+  
     
   </div>
   <div className="w-full h-full  mt-2" style={{ borderRadius: '1.5rem 1.5rem 0 0', borderImage: 'linear-gradient(to right, blue, red) 1', borderWidth: '0.4rem 0 0 0', borderStyle: 'solid'  }}>
@@ -58,5 +58,6 @@ setFixedSearch(`${googleQuery}${searchValue}` )
 
 export default App
 
+// @nekoSempai
 
 
